@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Temple</title>
+    <style>
+        body {
+            font-family: Poppins;
+            margin: 0;
+            background: #fff
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+            background: #f6ecd7
+        }
+
+        h1 {
+            color: #b8962e
+        }
+
+        .img-box {
+            text-align: center
+        }
+
+        .img-box img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3)
+        }
+
+        button {
+            margin: 20px;
+            padding: 12px 25px;
+            background: #b8962e;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            padding: 20px
+        }
+.footer {
+    background: linear-gradient(135deg, #f6ecd7, #fff8e6);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #e6d8b5;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+.footer .name {
+    font-weight: 600;
+    color: #b8962e;
+    font-size: 18px;
+}
+
+ </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="title"></h1>
+    </header>
+
+    <div class="img-box">
+        <img id="img">
+        <br>        
+        <button onclick="prev()">Prev</button>
+        <button onclick="goHome()">Home</button>
+        <button onclick="next()">Next</button>
+    </div>
+
+    <p id="desc"></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        let imgs = [];
+        let index = 0;
+
+        fetch("temple.json")
+            .then(res => res.json())
+            .then(data => {
+                const temple = data.temples.find(t => t.id === id);
+
+                document.getElementById("title").innerText = temple.name;
+                document.getElementById("desc").innerText = temple.description;
+
+                imgs = temple.images;
+                document.getElementById("img").src = imgs[0];
+            });
+
+             // ✅ Home button function
+        function goHome() {
+        window.location.href = "index.html";
+    }
+        function next() {
+            index = (index + 1) % imgs.length;
+            document.getElementById("img").src = imgs[index];
+        }
+        function prev() {
+            index = (index - 1 + imgs.length) % imgs.length;
+            document.getElementById("img").src = imgs[index];
+        }
+    </script>
+
+</body>
+
+</html>

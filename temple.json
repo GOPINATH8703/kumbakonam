@@ -1,0 +1,34 @@
+{
+    "temples": [
+        {
+            "id": "kumbakonam",
+            "name": "Adi kumbeswarar Temple",
+            "short": "The temple is the largest Shiva temple of Kumbakonam and has a 9-storeyed rajagopuram (gateway tower) 125 ft tall It is spread over 4 acres in the centre of the town. The temple has 3 concentric compounds, elongated along an east–west axis has triple set of gopurams.",
+            "description": "The temple is the largest Shiva temple of Kumbakonam and has a 9-storeyed rajagopuram (gateway tower) 125 ft tall It is spread over 4 acres in the centre of the town. The temple has 3 concentric compounds, elongated along an east–west axis has triple set of gopurams.",
+            "images": [
+                "images/periyanayaki-amman-temple-darasuram-vintage-retro-effect-filtered-hipster-style-image-entrance-tower-gopura-against-sky-70877156.jpg",
+                "images/darasuram-airavateswara.jpg"
+            ]
+        },
+        {
+            "id": "airavata",
+            "name": "Airavatesvara Temple",
+            "short": "With its stunning architecture, intricate sculptures, vivid paintings, and exquisite bronze casting, it is a true marvel. The Airavatesvara Temple is dedicated to Lord Shiva and is named after 'Airavat,' the majestic white elephant of Lord Indra.",
+            "description": "With its stunning architecture, intricate sculptures, vivid paintings, and exquisite bronze casting, it is a true marvel. The Airavatesvara Temple is dedicated to Lord Shiva and is named after 'Airavat,' the majestic white elephant of Lord Indra.",
+            "images": [
+                "images/vaitheeswaran1.jpg",
+                "images/Vaitheeswaran_temple_(4).jpg"
+            ]
+        },
+        {
+            "id": "saranga",
+            "name": "Sarangapani Temple",
+            "short": "The Sarangapani Temple story centers on Lord Vishnu appearing as Sarangapani (wielder of the bow 'Sarangam') to bless Sage Hemarishi and facilitate his reunion with Goddess Lakshmi (who became Komalavalli), highlighting themes of divine grace, penance, and overcoming ego (like Sage Bhrigu's) to achieve spiritual union",
+            "description": "The Sarangapani Temple story centers on Lord Vishnu appearing as Sarangapani (wielder of the bow 'Sarangam') to bless Sage Hemarishi and facilitate his reunion with Goddess Lakshmi (who became Komalavalli), highlighting themes of divine grace, penance.",
+            "images": [
+                "images/sagangam1.webp",
+                "images/sanragam2.webp"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kumbakonam – Home</title>
+<style>
+body{font-family:Poppins;background:#fff;margin:0}
+header{text-align:center;padding:50px;background:#f6ecd7}
+h1{color:#b8962e}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ gap:40px;
+ padding:60px;
+}
+
+.card{
+ text-decoration:none;
+ color:#333;
+ background:#fff;
+ border-radius:25px;
+ overflow:hidden;
+ box-shadow:0 15px 35px rgba(0,0,0,0.2);
+ transition:.4s;
+}
+.card:hover{transform:translateY(-10px)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card div{text-align:center;padding:20px}
+.card h2{color:#b8962e}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Kumbakonam – Temple Heritage</h1>
+<p>Kumbakonam is a historic temple town in Tamil Nadu with numerous temples dedicated to both Lord Vishnu and Lord Shiva, including the Adi Kumbeswarar Temple, Sarangapani Temple, and Airavatesvara Temple, a UNESCO World Heritage site. It is also a center for the nine Navagraha temples, each dedicated to one of the nine planets.  </p>
+</header>
+
+<div class="grid" id="templeGrid"></div>
+
+<script>
+fetch("temple.json")
+.then(res => res.json())
+.then(data => {
+  const grid = document.getElementById("templeGrid");
+
+  data.temples.forEach(t => {
+    grid.innerHTML += `
+      <a class="card" href="temple.html?id=${t.id}">
+        <img src="${t.images[0]}">
+        <div>
+          <h2>${t.name}</h2>
+          <p>${t.short}</p>
+        </div>
+      </a>
+    `;
+  });
+});
+</script>
+<footer class="footer">
+  <center>
+    <p>Designed by <span class="name">Gopi</span></p>
+  </center>
+</footer>
+</body>
+</html>
